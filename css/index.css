@@ -3,7 +3,7 @@
 	/*navigation's css*/
 #home .cn-button:focus{box-shadow: none !important;}
 	/*navigation's css*/
-#home .ui-content{padding: 0px;}
+#home .ui-content{padding: 0px;background-color:#000;}
 #home .side-nav.ui-link {color: white;left: 0;position: absolute;text-decoration: none;z-index: 20;}
 
 #home .swiper-container {
