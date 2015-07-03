@@ -13,4 +13,8 @@ jQuery(document).ready(function($) {
 	    $('.gallery').click(function(){
 	    	
 	    });
-});
+
+	    //photoswiper
+	    
+
+})

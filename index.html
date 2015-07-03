@@ -8,13 +8,17 @@
 	<link rel="stylesheet" href="css/demo.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/photoswipe.css"> 
+	<link rel="stylesheet" href="css/default-skin.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<script src="js/polyfills.js"></script>        
 	<script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-	<link rel="stylesheet" href="css/swiper.min.css">
+    
+  
 </head>
 <body>
 	<!-- Start of first page -->
@@ -33,9 +37,9 @@
 				<div class="cn-wrapper" id="cn-wrapper">
 				    <ul>
 				      <li class="gallery"><a href="#"><span class="icon-picture"></span></a></li>
-				      <li><a href="#"><span class="icon-headphones"></span></a></li>
+				      <li><a href="#floor"><span class="icon-headphones"></span></a></li>
 				      <li><a href="#"><span class="icon-home"></span></a></li>
-				      <li><a href="#"><span class="icon-facetime-video"></span></a></li>
+				      <li><a href="#video"><span class="icon-facetime-video"></span></a></li>
 				      <li><a href="#"><span class="icon-envelope-alt"></span></a></li>
 				     </ul>
 				</div>
@@ -66,33 +70,112 @@
 <!-- Start of floor plan's page -->
 <div data-role="page" id="floor">
 
-	<div data-role="header">
-		<h1>Bar</h1>
-	</div><!-- /header -->
+	
 
 	<div role="main" class="ui-content">
+		<div class="map">
+			<img src="img/top-view.jpg" usemap="#map" alt="Earth Artica">
+			<map name="map">
+    			<area shape="poly" coords="1692, 487, 1660, 641, 1866, 687, 1898, 525" data="img/layouts/j-n-tower.jpg"  />
 
+    <area shape="poly" coords="1124, 437, 1098, 555, 1250, 589, 1256, 555, 1346, 573, 1356, 511, 1270, 491, 1274, 465"  data="img/layouts/HI-tower.jpg"/>
+     <area shape="poly" coords="838, 813, 808, 903, 760, 891, 724, 999, 868, 1051, 906, 939, 866, 923, 898, 833" data="img/layouts/HI-tower.jpg"/>
+      <area shape="poly" coords="2141, 537, 2077, 865, 3943, 1255, 4013, 921" data="img/layouts/j-n-tower.jpg" />
+       <area shape="poly" coords="381, 1532, 378, 1972, 4008, 1982, 4001, 1515" data="img/layouts/a-g-tower.jpg"/>
+		  <area shape="rect" coords="225, 2025, 821, 2302"  data="img/layouts/b-shop.jpg">
+ 		<area shape="rect" coords="1278, 2002, 1785, 2318" data="img/layouts/b-off.jpg"/>
+ 		  <area shape="rect" coords="2111, 2032, 2628, 2292" data="img/layouts/a-shop.jpg"/>
+ 		     <area shape="rect" coords="3418, 2005, 3975, 2318" data="img/layouts/a-off.jpg"/>
+		</map>
+		</div>
+			
+			<!-- swiper -->
+			<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <div class="pswp__container">
+            <!-- don't modify these 3 pswp__item elements, data is added later on -->
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <div class="pswp__button pswp__button--close" title="Close (Esc)"></div>
+
+                <div class="pswp__button pswp__button--share" title="Share"></div>
+
+                <div class="pswp__button pswp__button--fs" title="Toggle fullscreen"></div>
+
+                <div class="pswp__button pswp__button--zoom" title="Zoom in/out"></div>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+<!-- 
+            <div class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </div>
+
+            <div class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </div> -->
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+</div>
+
+			<!-- swiper -->
+		
 	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
+	
 </div><!-- /end of floor page -->
 
 	<!-- aminities page -->
 <div data-role="page" id="aminities">
 
-	<div data-role="header">
-		
-	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
 		
+
+<button id="btn">Open PhotoSwipe</button>
+
+
+
 	</div><!-- /content -->
 
-	<div data-role="footer">
 	
-	</div><!-- /footer -->
 </div>
 	<!-- aminities page -->
 
@@ -105,7 +188,7 @@
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		
+		<div class="btn">sd</div>
 	</div><!-- /content -->
 
 	<div data-role="footer">
@@ -134,8 +217,54 @@
 
 
 	<script src="js/demo1.js"></script>
+	 <script src="js/photo-swipe.min.js"></script> 
+	 	
+	<script src="js/photo-swipe-ui-default.min.js"></script> 
 	<script src="js/app.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/swiper.jquery.min.js"></script>
+	<script src="https://raw.githubusercontent.com/davidjbradshaw/imagemap-resizer/master/js/imageMapResizer.min.js"></script>
+	 <script>
+ 
+	    //photoswiper
+	    jQuery(document).ready(function($) {
+	    	 $('map').imageMapResize();
+	    	     $('#floor .map').height($(window).height());
+
+  	$("map[name=map] area").on('click', function () {
+	   				var pswpElement = document.querySelectorAll('.pswp')[0];
+
+    // build items array
+    var items = [
+        {
+            src: $(this).attr('data'),
+            w: 1024,
+            h: 768
+        }
+    ];
+    
+    // define options (if needed)
+    var options = {
+             // history & focus options are disabled on CodePen        
+        history: false,
+        focus: false,
+        maxSpreadZoom:6,
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+        
+    };
+    
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+
+	   });
+    	
+    	$('#video .btn').click(function(event) {
+    		/* Act on the event */
+    		alert('asdd');
+    	});
+});
+
+	 </script>
 </body>
 </html>
