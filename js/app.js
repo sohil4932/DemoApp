@@ -1,15 +1,18 @@
-
+ 
 jQuery(document).ready(function($) {
 	$('#cn-button').removeClass('ui-btn ui-shadow');
 
 	    $('#home .ui-content').css('height',$(window).height());
+
 
 	    var homeGallery = new Swiper('.gallery-top', {
 	        autoplay: 5000,
 	        speed: 1000,
 	        spaceBetween: 10
 		    });
-	    //photoswiper   				    	 
+	    //photoswiper
+
+
 
 	    $('#floor .map').height($(window).height());
 	    //map click event
@@ -47,5 +50,4 @@ jQuery(document).ready(function($) {
     		/* Act on the event */
     		alert('asdd');
     	});
-
 })

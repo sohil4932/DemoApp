@@ -1,7 +1,7 @@
 /*home page's css*/
 
 	/*navigation's css*/
-#home .cn-button:focus{box-shadow: none !important;}
+ .cn-button:focus{box-shadow: none !important;}
 	/*navigation's css*/
 #home .ui-content{padding: 0px;background-color:#000;}
 #home .side-nav.ui-link {color: white;left: 0;position: absolute;text-decoration: none;z-index: 20;}
@@ -40,7 +40,9 @@
 #home .gallary {
 	display: none;
 }
-#home #panel-btn{width: 70px;position: absolute;z-index: 100;background-color: #211f1f;top: 10px;padding-left:10px;padding-top: 3px;padding-bottom: 3px;padding-right: 3px;}
+ #panel-btn{width: 70px;position: absolute;z-index: 100;background-color: #211f1f;top: 10px;padding-left:10px;padding-top: 3px;padding-bottom: 3px;padding-right: 3px;}
+ #myPanel{background-color: #211f1f;}
+ #myPanel h2{color: #fff;}
 /*home page's css*/
 
 /*floor page's css*/
@@ -58,9 +60,16 @@
 /*video page's css*/
 
 /*aminities page's css*/
+#aminities .ui-content{height: 100%;}
 
 /*aminities page's css*/
 
 /*help page's css*/
 
 /*help page's css*/
+
+/* gallery page's css*/
+#gallery .ui-content{padding: 0px;background-color: #211f1f;}
+#gallery .box{width: 33.33%;float: left;}
+#gallery .box img{max-width: 100%;height: 200px;width: 100%;display: block;}
+/* gallery page's css*/
