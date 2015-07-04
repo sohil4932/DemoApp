@@ -44,11 +44,11 @@
 /*home page's css*/
 
 /*floor page's css*/
-#floor .floormap img {
+#floor .map img {
     min-height: 100%;
     max-width: 100%;
 }
-#floor .floormap{overflow: hidden;}
+#floor .map{overflow: hidden;}
 #floor .ui-content{padding: 0px;}
 /*floor page's css*/
 
