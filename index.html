@@ -17,7 +17,7 @@
 	<script src="js/polyfills.js"></script>        
 	<script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    
+   
   
 </head>
 <body>
@@ -37,7 +37,7 @@
 				<div class="cn-wrapper" id="cn-wrapper">
 				    <ul>
 				      <li class="gallery"><a href="#"><span class="icon-picture"></span></a></li>
-				      <li><a href="#floor"><span class="icon-headphones"></span></a></li>
+				      <li ><a  id="tmp"><span class="icon-headphones"></span></a></li>
 				      <li><a href="#"><span class="icon-home"></span></a></li>
 				      <li><a href="#video"><span class="icon-facetime-video"></span></a></li>
 				      <li><a href="#"><span class="icon-envelope-alt"></span></a></li>
@@ -220,51 +220,20 @@
 	 <script src="js/photo-swipe.min.js"></script> 
 	 	
 	<script src="js/photo-swipe-ui-default.min.js"></script> 
-	<script src="js/app.js"></script>
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/swiper.jquery.min.js"></script>
-	<script src="https://raw.githubusercontent.com/davidjbradshaw/imagemap-resizer/master/js/imageMapResizer.min.js"></script>
-	 <script>
- 
-	    //photoswiper
-	    jQuery(document).ready(function($) {
-	    	 $('map').imageMapResize();
-	    	     $('#floor .map').height($(window).height());
-
-  	$("map[name=map] area").on('click', function () {
-	   				var pswpElement = document.querySelectorAll('.pswp')[0];
-
-    // build items array
-    var items = [
-        {
-            src: $(this).attr('data'),
-            w: 1024,
-            h: 768
-        }
-    ];
-    
-    // define options (if needed)
-    var options = {
-             // history & focus options are disabled on CodePen        
-        history: false,
-        focus: false,
-        maxSpreadZoom:6,
-        showAnimationDuration: 0,
-        hideAnimationDuration: 0
-        
-    };
-    
-    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
-
-	   });
-    	
-    	$('#video .btn').click(function(event) {
-    		/* Act on the event */
-    		alert('asdd');
-    	});
-});
-
-	 </script>
+		    <script src="js/mapResizer.min.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			jQuery(document).ready(function($) {
+				$('map').imageMapResize();
+				$('#tmp').click(function(event) {
+					window.location.href = "#floor";
+					location.reload(true);
+										
+				});
+			});
+		</script>
 </body>
 </html>
