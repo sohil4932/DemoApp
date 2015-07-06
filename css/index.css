@@ -5,44 +5,26 @@
 	/*navigation's css*/
 #home .ui-content{padding: 0px;background-color:#000;}
 #home .side-nav.ui-link {color: white;left: 0;position: absolute;text-decoration: none;z-index: 20;}
-
-#home .swiper-container {
-        width: 100%;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-#home .swiper-slide {
-    background-size: cover;
-    background-position: center;
-}
-#home .gallery-top {
-    height: 100%;
-    width: 100%;
-}
-#home .gallery-thumbs {
-    height: 20%;
-    box-sizing: border-box;
-    padding: 10px 0;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0,0,0,0.8);
-}
-#home .gallery-thumbs .swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-}
-#home .gallery-thumbs .swiper-slide-active {
-    opacity: 1;
-}
-
-#home .gallary {
-	display: none;
-}
- #panel-btn{width: 70px;position: absolute;z-index: 100;background-color: #211f1f;top: 10px;padding-left:10px;padding-top: 3px;padding-bottom: 3px;padding-right: 3px;}
+#panel-btn{width: 70px;position: absolute;z-index: 100;background-color: #211f1f;top: 10px;padding-left:10px;padding-top: 3px;padding-bottom: 3px;padding-right: 3px;}
  #myPanel{background-color: #211f1f;}
  #myPanel h2{color: #fff;}
+
+   #home .owl-wrapper-outer, #aminities .owl-wrapper-outer {
+    height: 100% !important;    
+}
+
+#home .owl-wrapper ,#aminities .owl-wrapper{
+     height: 100%;   
+}
+
+#home .owl-item,#aminities .owl-item {
+    height: 100%;
+}
+#home #owl-demo,#aminities #aminities-slider{height: 100%;overflow: hidden;}
+#home #owl-demo .item,#aminities #aminities-slider .item {
+    background-size: 100% 100%;
+    height: 100%;
+}
 /*home page's css*/
 
 /*floor page's css*/
@@ -60,8 +42,39 @@
 /*video page's css*/
 
 /*aminities page's css*/
-#aminities .ui-content{height: 100%;}
 
+ #aminities .owl-wrapper-outer {
+    height: 100% !important;    
+}
+#aminities .ui-content{padding: 0px;background-color: #211f1f;}
+#aminities .owl-wrapper{
+     height: 100%;   
+}
+
+#aminities .owl-item {
+    height: 100%;
+}
+#aminities #aminities-slider{height: 100%;overflow: hidden;}
+#aminities #aminities-slider .item {
+    background-size: 100% 100%;
+    height: 100%;
+}
+
+#aminities #aminities-slider .item > div {
+
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+#aminities-slider .text {
+    left: 20px;
+    position: absolute;
+    top: 40%;
+        background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+}
 /*aminities page's css*/
 
 /*help page's css*/
@@ -70,6 +83,12 @@
 
 /* gallery page's css*/
 #gallery .ui-content{padding: 0px;background-color: #211f1f;}
-#gallery .box{width: 33.33%;float: left;}
-#gallery .box img{max-width: 100%;height: 200px;width: 100%;display: block;}
+#gallery .box{width: 50%;float: left;padding: 5px;}
+#gallery .box img{max-width: 100%;height: 400px;width: 100%;display: block;}
+#gallery .box:nth-child(2n-1) {
+    padding-left: 0px !important;
+}
+.box:nth-child(2n) {
+    padding-right: 0px !important;
+}
 /* gallery page's css*/

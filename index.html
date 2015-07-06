@@ -7,9 +7,8 @@
 	<link rel="stylesheet" href="css/component1.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="css/swiper.min.css">
-	<link rel="stylesheet" href="css/photoswipe.css"> 
-	<link rel="stylesheet" href="css/default-skin.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
 	<link rel="stylesheet" href="css/swipebox.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -17,7 +16,8 @@
 	<script src="js/polyfills.js"></script>        
 	<script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-   
+   	 <script src="js/owl.carousel.min.js"></script>
+
   
 </head>
 <body>
@@ -36,8 +36,8 @@
 				<div class="cn-wrapper" id="cn-wrapper">
 				    <ul>
 				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
-				      <li ><a  id="tmp"><span class="icon-headphones"></span></a></li>
-				      <li><a href="demo.html"><span class="icon-home"></span></a></li>
+				      <li ><a  href="#aminities"><span class="icon-headphones"></span></a></li>
+				      <li><a href="#"><span class="icon-home"></span></a></li>
 				      <li><a href="#video"><span class="icon-facetime-video"></span></a></li>
 				      <li><a href="#"><span class="icon-envelope-alt"></span></a></li>
 				     </ul>
@@ -47,20 +47,17 @@
 				
 		</div>
 
-		<div class="swiper-container gallery-top">
-	        <div class="swiper-wrapper">
-	            <div class="swiper-slide" style="background-image:url('img/1.jpg')"></div>
-	            <div class="swiper-slide" style="background-image:url('img/2.jpg')"></div>
-	            <div class="swiper-slide" style="background-image:url('img/3.jpg')"></div>
-	            <div class="swiper-slide" style="background-image:url('img/4.jpg')"></div>
-	            <div class="swiper-slide" style="background-image:url('img/5.jpg')"></div>
-	            <div class="swiper-slide" style="background-image:url('img/6.jpg')"></div>
-	            <div class="swiper-slide" style="background-image:url('img/7.jpg')"></div>
-	            <div class="swiper-slide" style="background-image:url('img/8.jpg')"></div>
-	            <div class="swiper-slide" style="background-image:url('img/9.jpg')"></div>
-	            <div class="swiper-slide" style="background-image:url('img/10.jpg')"></div>
-	        </div>
-	    </div>
+		
+
+    <div id="owl-demo" class="owl-carousel owl-theme">
+     
+      <div class="item" style="background-image:url('img/1.jpg')"></div>
+      <div class="item" style="background-image:url('img/2.jpg')"></div>
+      <div class="item" style="background-image:url('img/3.jpg')"></div>
+     
+    </div>
+
+
 	    
 		</div><!-- /content -->
 
@@ -68,110 +65,54 @@
 
 <!-- Start of floor plan's page -->
 <div data-role="page" id="floor">
-
-	
-
 	<div role="main" class="ui-content">
-		<div class="map">
-			<img src="img/top-view.jpg" usemap="#map" alt="Earth Artica">
-			<map name="map">
-    			<area shape="poly" coords="1692, 487, 1660, 641, 1866, 687, 1898, 525" data="img/layouts/j-n-tower.jpg"  />
-
-    <area shape="poly" coords="1124, 437, 1098, 555, 1250, 589, 1256, 555, 1346, 573, 1356, 511, 1270, 491, 1274, 465"  data="img/layouts/HI-tower.jpg"/>
-     <area shape="poly" coords="838, 813, 808, 903, 760, 891, 724, 999, 868, 1051, 906, 939, 866, 923, 898, 833" data="img/layouts/HI-tower.jpg"/>
-      <area shape="poly" coords="2141, 537, 2077, 865, 3943, 1255, 4013, 921" data="img/layouts/j-n-tower.jpg" />
-       <area shape="poly" coords="381, 1532, 378, 1972, 4008, 1982, 4001, 1515" data="img/layouts/a-g-tower.jpg"/>
-		  <area shape="rect" coords="225, 2025, 821, 2302"  data="img/layouts/b-shop.jpg">
- 		<area shape="rect" coords="1278, 2002, 1785, 2318" data="img/layouts/b-off.jpg"/>
- 		  <area shape="rect" coords="2111, 2032, 2628, 2292" data="img/layouts/a-shop.jpg"/>
- 		     <area shape="rect" coords="3418, 2005, 3975, 2318" data="img/layouts/a-off.jpg"/>
-		</map>
-		</div>
-			
-			<!-- swiper -->
-			<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element, as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-        <div class="pswp__container">
-            <!-- don't modify these 3 pswp__item elements, data is added later on -->
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <div class="pswp__button pswp__button--close" title="Close (Esc)"></div>
-
-                <div class="pswp__button pswp__button--share" title="Share"></div>
-
-                <div class="pswp__button pswp__button--fs" title="Toggle fullscreen"></div>
-
-                <div class="pswp__button pswp__button--zoom" title="Zoom in/out"></div>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-<!-- 
-            <div class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </div>
-
-            <div class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </div> -->
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-          </div>
-
-        </div>
-
-</div>
-
-			<!-- swiper -->
 		
 	</div><!-- /content -->
 	
 </div><!-- /end of floor page -->
 
+
+
 	<!-- aminities page -->
 <div data-role="page" id="aminities">
-
+<div data-role="panel" id="myPanel"> 
+	   <h2>Inquiry</h2>
+	</div> 
 
 	<div role="main" class="ui-content">
-		
+		<a href="#myPanel"><img src="img/logo.png" id="panel-btn"></a>
+			<div class="component">
+				<!-- Start Nav Structure -->
+				<!-- <button class="cn-button" id="cn-button">+</button> -->
+				<img src="img/hlf-circle.png" class="cn-button" id="cn-button2">
+				<div class="cn-wrapper" id="cn-wrapper2">
+				    <ul>
+				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
+				      <li ><a  href="#aminities"><span class="icon-headphones"></span></a></li>
+				      <li><a href="#"><span class="icon-home"></span></a></li>
+				      <li><a href="#video"><span class="icon-facetime-video"></span></a></li>
+				      <li><a href="#"><span class="icon-envelope-alt"></span></a></li>
+				     </ul>
+				</div>
+				<div id="cn-overlay" class="cn-overlay"></div>
+				<!-- End Nav Structure -->
+				
+		</div>
+		 <div id="aminities-slider" class="owl-carousel owl-theme">
+		     
+		      <div class="item" style="background-image:url('img/10.jpg')"><div><div class="text"><h2>Lorem Ipsum is simply dummy text of the</h2><div>Lorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of the</div></div></div></div>
+		      <div class="item" style="background-image:url('img/2.jpg')"><div><div class="text"><h2>Lorem Ipsum is simply dummy text of the</h2><div>Lorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of the</div></div></div></div>
+		      <div class="item" style="background-image:url('img/14.jpg')"><div><div class="text"><h2>Lorem Ipsum is simply dummy text of the</h2><div>Lorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of the</div></div></div></div>
+     
+    	</div>
+
 	</div><!-- /content -->
 
 	
 </div>
 	<!-- aminities page -->
+
+
 
 	<!-- video's page -->
 	
@@ -213,20 +154,20 @@
 		
 	<div data-role="page" id="gallery">
 
-
-	<div role="main" class="ui-content">
-		<div data-role="panel" id="myPanel"> 
+<div data-role="panel" id="myPanel"> 
 	   		<h2>Inquiry</h2>
 		</div>
+	<div role="main" class="ui-content">
+		
 		<a href="#myPanel"><img src="img/logo.png" id="panel-btn"></a> 
 			<div class="gallery-wrapper">
 				<ul id="box-container">
-				<li class="box">
+				<li class="box" style="padding-top:0px;">
 					<a class="swipebox" href="img/1.jpg">
 						<img alt="image" src="img/1.jpg">
 					</a>
 				</li>
-				<li class="box">
+				<li class="box" style="padding-top:0px;">
 					<a class="swipebox" href="img/2.jpg">
 						<img alt="image" src="img/2.jpg">
 					</a>
@@ -288,13 +229,13 @@
 					</a>
 				</li>
 
-				<li class="box">
+				<li class="box" style="padding-bottom:0px;">
 					<a  class="swipebox" href="img/13.jpg">
 						<img alt="image" src="img/13.jpg">
 					</a>
 				</li>
 
-				<li class="box">
+				<li class="box" style="padding-bottom:0px;">
 					<a  class="swipebox" href="img/14.jpg">
 						<img alt="image" src="img/14.jpg">
 					</a>
@@ -307,12 +248,12 @@
 	<div class="component">
 				<!-- Start Nav Structure -->
 				<!-- <button class="cn-button" id="cn-button">+</button> -->
-				<img src="img/hlf-circle.png" class="cn-button " id="cn-button2">
-				<div class="cn-wrapper" id="cn-wrapper2">
+				<img src="img/hlf-circle.png" class="cn-button " id="cn-button3">
+				<div class="cn-wrapper" id="cn-wrapper3">
 				    <ul>
 				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
-				      <li ><a  id="tmp"><span class="icon-headphones"></span></a></li>
-				      <li><a href="#"><span class="icon-home"></span></a></li>
+				      <li ><a href="#"><span class="icon-headphones"></span></a></li>
+				      <li><a href="#aminities"><span class="icon-home"></span></a></li>
 				      <li><a href="#video"><span class="icon-facetime-video"></span></a></li>
 				      <li><a href="#"><span class="icon-envelope-alt"></span></a></li>
 				     </ul>
@@ -329,27 +270,11 @@
 
 
 	<script src="js/demo1.js"></script>
-	 <script src="js/demo2.js"></script>
-	 <script src="js/photo-swipe.min.js"></script> 
-	 	
-	<script src="js/photo-swipe-ui-default.min.js"></script> 
-	<script src="js/swiper.jquery.min.js"></script>
-	<script src="js/mapResizer.min.js"></script>
-		<script src="js/jquery.swipebox.min.js"></script>
+	<script src="js/demo2.js"></script>
+	<script src="js/demo3.js"></script>
 
-		<script src="js/app.js"></script>
-		<script>
+	<script src="js/jquery.swipebox.min.js"></script>
+	<script src="js/app.js"></script>
 
-			jQuery(document).ready(function($) {
-				$('map').imageMapResize();
-
-				$('#tmp').click(function(event) {
-					window.location.href = "#floor";
-					location.reload(true);
-										
-				});
-	$( '.swipebox' ).swipebox();
-			});
-		</script>
 </body>
 </html>

@@ -7,11 +7,6 @@
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/swiper.min.css">
-        <link rel="stylesheet" href="css/component1.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-
 
     <!-- Demo styles -->
     <style>
@@ -30,153 +25,67 @@
     .swiper-container {
         width: 100%;
         height: 100%;
-        background: #000;
     }
     .swiper-slide {
+        text-align: center;
         font-size: 18px;
-        color:#fff;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 40px 60px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
     }
-    .parallax-bg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 130%;
-        height: 100%;
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center;
-    }
-    .swiper-slide .title {
-        font-size: 41px;
-        font-weight: 300;
-    }
-    .swiper-slide .subtitle {
-        font-size: 21px;
-    }
-    .swiper-slide .text {
-        font-size: 14px;
-        max-width: 400px;
-        line-height: 1.3;
-    }
-    
     </style>
 </head>
 <body>
-        <div class="component">
-                <!-- Start Nav Structure -->
-                <!-- <button class="cn-button" id="cn-button">+</button> -->
-                <img src="img/hlf-circle.png" class="cn-button" id="cn-button">
-                <div class="cn-wrapper" id="cn-wrapper">
-                    <ul>
-                      <li class="gallery"><a href="index.html#gallery"><span class="icon-picture"></span></a></li>
-                      <li ><a  id="tmp"><span class="icon-headphones"></span></a></li>
-                      <li><a href="demo.html"><span class="icon-home"></span></a></li>
-                      <li><a href="#video"><span class="icon-facetime-video"></span></a></li>
-                      <li><a href="#"><span class="icon-envelope-alt"></span></a></li>
-                     </ul>
-                </div>
-                <div id="cn-overlay" class="cn-overlay"></div>
-                <!-- End Nav Structure -->
-                
-        </div>
     <!-- Swiper -->
-
     <div class="swiper-container">
-        <div class="parallax-bg" style="background-image:url(img/7.jpg)" data-swiper-parallax="-23%"></div>
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="title" data-swiper-parallax="-100">Slide 1</div>
-                <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-                <div class="text" data-swiper-parallax="-300">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="title" data-swiper-parallax="-100">Slide 2</div>
-                <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-                <div class="text" data-swiper-parallax="-300">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="title" data-swiper-parallax="-100">Slide 3</div>
-                <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-                <div class="text" data-swiper-parallax="-300">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
-                </div>
-            </div>
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">Slide 10</div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination swiper-pagination-white"></div>
-        <!-- Add Navigation -->
-        <div class="swiper-button-prev swiper-button-white"></div>
-        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-pagination"></div>
+
+
+           
     </div>
-
     <!-- Swiper JS -->
-    <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
     <script src="js/swiper.jquery.min.js"></script>
-
-    <script src="js/modernizr-2.6.2.min.js"></script>
-
-    <script src="js/polyfills.js"></script>        
 
     <!-- Initialize Swiper -->
     <script>
-    var swiper = new Swiper('.swiper-container', {
+    jQuery(document).ready(function($) {
+    
+                 
+         var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
-        paginationClickable: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        parallax: true,
-        speed: 600,
+        paginationClickable: true
+    });         
+
     });
-    (function(){
-
-    var button = document.getElementById('cn-button'),
-    wrapper = document.getElementById('cn-wrapper'),
-    overlay = document.getElementById('cn-overlay');
-
-    //open and close menu when the button is clicked
-    var open = false;
-    button.addEventListener('click', handler, false);
-    wrapper.addEventListener('click', cnhandle, false);
-
-    function cnhandle(e){
-        e.stopPropagation();
-    }
-
-    function handler(e){
-        if (!e) var e = window.event;
-        e.stopPropagation();//so that it doesn't trigger click event on document
-
-        if(!open){
-            openNav();
-        }
-        else{
-            closeNav();
-        }
-    }
-    function openNav(){
-        open = true;
-        button.innerHTML = "-";
-        classie.add(overlay, 'on-overlay');
-        classie.add(wrapper, 'opened-nav');
-    }
-    function closeNav(){
-        open = false;
-        button.innerHTML = "+";
-        classie.remove(overlay, 'on-overlay');
-        classie.remove(wrapper, 'opened-nav');
-    }
-    document.addEventListener('click', closeNav);
-
-})();
-
-
+   
     </script>
 </body>
 </html>
