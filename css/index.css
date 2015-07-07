@@ -6,25 +6,20 @@
 #home .ui-content{padding: 0px;background-color:#000;}
 #home .side-nav.ui-link {color: white;left: 0;position: absolute;text-decoration: none;z-index: 20;}
 #panel-btn{width: 70px;position: absolute;z-index: 100;background-color: #211f1f;top: 10px;padding-left:10px;padding-top: 3px;padding-bottom: 3px;padding-right: 3px;}
- #myPanel{background-color: #211f1f;}
+ #myPanel,#gallery-panel,#aminities-panel{background-color: #211f1f;}
  #myPanel h2{color: #fff;}
+ #myPanel .logo,#gallery-panel .logo,#aminities-panel .logo{text-align: center;}
+#myPanel .logo > img, #gallery-panel .logo > img,#aminities-panel  .logo > img{width: 100px;}
+#myPanel .buttons,#gallery-panel .buttons ,#aminities-panel .buttons {color: #d2ae6d;margin-top: 50%;overflow: hidden;}
 
-   #home .owl-wrapper-outer, #aminities .owl-wrapper-outer {
-    height: 100% !important;    
-}
+#myPanel .buttons div,#gallery-panel .buttons div ,#aminities-panel .buttons div{float: left;font-size: 30px;text-align: center;width: 33.33%;}
+#home .owl-wrapper-outer, #aminities .owl-wrapper-outer {height: 100% !important;    }
 
-#home .owl-wrapper ,#aminities .owl-wrapper{
-     height: 100%;   
-}
+#home .owl-wrapper ,#aminities .owl-wrapper{ height: 100%;   }
 
-#home .owl-item,#aminities .owl-item {
-    height: 100%;
-}
+#home .owl-item,#aminities .owl-item {height: 100%;}
 #home #owl-demo,#aminities #aminities-slider{height: 100%;overflow: hidden;}
-#home #owl-demo .item,#aminities #aminities-slider .item {
-    background-size: 100% 100%;
-    height: 100%;
-}
+#home #owl-demo .item,#aminities #aminities-slider .item {background-size: 100% 100%;height: 100%;}
 /*home page's css*/
 
 /*floor page's css*/
@@ -85,10 +80,21 @@
 #gallery .ui-content{padding: 0px;background-color: #211f1f;}
 #gallery .box{width: 50%;float: left;padding: 5px;}
 #gallery .box img{max-width: 100%;height: 400px;width: 100%;display: block;}
-#gallery .box:nth-child(2n-1) {
+#gallery figure:nth-child(2n-1) {
     padding-left: 0px !important;
 }
-.box:nth-child(2n) {
+#gallery figure:nth-child(2n) {
     padding-right: 0px !important;
+}
+#gallery figure img {
+    display: block;
+    height: 250px;
+    max-width: 100%;
+    width: 100%;
+}
+#gallery figure {
+    float: left;
+    width: 50%;
+    padding: 5px;
 }
 /* gallery page's css*/
