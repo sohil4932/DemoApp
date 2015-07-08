@@ -1,18 +1,18 @@
 /*home page's css*/
-
+p{text-shadow:none;}
 	/*navigation's css*/
  .cn-button:focus{box-shadow: none !important;}
 	/*navigation's css*/
-#home .ui-content{padding: 0px;background-color:#000;}
+#home .ui-content{padding: 0px;}
 #home .side-nav.ui-link {color: white;left: 0;position: absolute;text-decoration: none;z-index: 20;}
 #panel-btn{width: 70px;position: absolute;z-index: 100;background-color: #211f1f;top: 10px;padding-left:10px;padding-top: 3px;padding-bottom: 3px;padding-right: 3px;}
- #myPanel,#gallery-panel,#aminities-panel{background-color: #211f1f;}
+ #myPanel,#gallery-panel,#aminities-panel,#floor-panel,#info-panel{background-color: #211f1f;}
  #myPanel h2{color: #fff;}
- #myPanel .logo,#gallery-panel .logo,#aminities-panel .logo{text-align: center;}
-#myPanel .logo > img, #gallery-panel .logo > img,#aminities-panel  .logo > img{width: 100px;}
-#myPanel .buttons,#gallery-panel .buttons ,#aminities-panel .buttons {color: #d2ae6d;margin-top: 50%;overflow: hidden;}
+ #myPanel .logo,#gallery-panel .logo,#aminities-panel .logo,#floor-panel .logo,#info-panel .logo{text-align: center;}
+#myPanel .logo > img, #gallery-panel .logo > img,#aminities-panel  .logo > img, #floor-panel .logo > img, #info-panel .logo > img{width: 100px;}
+#myPanel .buttons,#gallery-panel .buttons ,#aminities-panel .buttons , #floor-panel .buttons, #info-panel .buttons{color: #d2ae6d;margin-top: 50%;overflow: hidden;}
 
-#myPanel .buttons div,#gallery-panel .buttons div ,#aminities-panel .buttons div{float: left;font-size: 30px;text-align: center;width: 33.33%;}
+#myPanel .buttons div,#gallery-panel .buttons div ,#aminities-panel .buttons div, #floor-panel .buttons div, #info-panel .buttons div{float: left;font-size: 30px;text-align: center;width: 33.33%;}
 #home .owl-wrapper-outer, #aminities .owl-wrapper-outer {height: 100% !important;    }
 
 #home .owl-wrapper ,#aminities .owl-wrapper{ height: 100%;   }
@@ -20,6 +20,34 @@
 #home .owl-item,#aminities .owl-item {height: 100%;}
 #home #owl-demo,#aminities #aminities-slider{height: 100%;overflow: hidden;}
 #home #owl-demo .item,#aminities #aminities-slider .item {background-size: 100% 100%;height: 100%;}
+
+
+#home video#bgvid {
+
+position: fixed;
+
+top: 50%;
+
+left: 50%;
+
+min-width: 100%;
+
+min-height: 100%;
+
+width: auto;
+
+height: auto;
+
+z-index: -100;
+
+-webkit-transform: translateX(-50%) translateY(-50%);
+
+transform: translateX(-50%) translateY(-50%);
+background-size: cover;
+
+}
+
+
 /*home page's css*/
 
 /*floor page's css*/
@@ -29,6 +57,33 @@
 }
 #floor .map{overflow: hidden;}
 #floor .ui-content{padding: 0px;}
+#floor{background-image: url(../img/top-view.jpg);background-size: cover;}
+#floor .menu {
+    float: right;
+}
+#floor .menu select {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: transparent;
+    border-color: -moz-use-text-color;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    padding-bottom: 5px;
+}
+
+#floor .menu {
+    color: white;
+    float: right;
+    margin-top: 20px;
+}
+
+#floor .menu > *{
+    float: left;
+    margin-right: 20px !important;
+}
 /*floor page's css*/
 
 
@@ -72,9 +127,26 @@
 }
 /*aminities page's css*/
 
-/*help page's css*/
+/*info page's css*/
+#info{background-color: #211f1f;}
 
-/*help page's css*/
+#info .site,#info .office, #info .booking {
+    color: #d1d3d6;
+    font-size: 12px;
+    margin-bottom: 20px;
+
+}
+#info .map {
+    width: 50%;
+     border-right: 1px solid #d1ad6d;
+    padding-right: 10px;
+    float: left;
+}
+#info .contact-wrapper .booking div{margin-bottom: 10px;}
+#info .contact-wrapper span{color: #d1ad6d;}
+#info .contact-wrapper{width: 50%;float: left;padding-left: 10px;}
+#info .map  img{max-width: 100%;}
+/*info page's css*/
 
 /* gallery page's css*/
 #gallery .ui-content{padding: 0px;background-color: #211f1f;}

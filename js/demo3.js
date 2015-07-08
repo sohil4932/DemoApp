@@ -2,7 +2,7 @@
 
 	var button = document.getElementById('cn-button3'),
     wrapper = document.getElementById('cn-wrapper3'),
-    overlay = document.getElementById('cn-overlay');
+    overlay = document.getElementById('cn-overlay3');
 
 	//open and close menu when the button is clicked
 	var open = false;

@@ -132,7 +132,7 @@
     };
 
     var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
-        var pswpElement = document.querySelectorAll('.pswp')[0],
+        var pswpElement = document.querySelectorAll('#gallery .pswp')[0],
             gallery,
             options,
             items;
@@ -208,12 +208,101 @@
 initPhotoSwipeFromDOM('.my-gallery');
  //gallery init code
     
+//floor page gallery init
+var openPhotoSwipe = function(id) {
+
+    var pswpElement = document.querySelectorAll('#floor .pswp')[0];
+
+    // build items array
+    if(id == 0){
+
+      var items = [
+        {
+            src: 'img/top-view.jpg',
+            w: 1024,
+            h: 1024
+        }
+    ];      
+    }else if(id == 1){
+       var items = [
+        {
+            src: 'img/layouts/a-shop.jpg',
+            w: 1024,
+            h: 1024
+        },
+        {
+             src: 'img/layouts/a-off.jpg',
+            w: 1024,
+            h: 1024
+        }
+    ];  
+    }else if(id == 2){
+        var items = [
+        {
+            src: 'img/layouts/b-shop.jpg',
+            w: 1024,
+            h: 1024
+        },
+        {
+             src: 'img/layouts/b-off.jpg',
+            w: 1024,
+            h: 1024
+        }
+    ];  
+    }else if(id == 3){
+        var items = [
+       
+        {
+             src: 'img/layouts/a-g-tower.jpg',
+            w: 1024,
+            h: 1024
+        }
+    ];  
+    }else if(id == 4){
+        var items = [
+        {
+             src: 'img/layouts/j-n-tower.jpg',
+            w: 1024,
+            h: 1024
+        }
+    ];  
+    }else{
+           var items = [
+        {
+             src: 'img/layouts/HI-tower.jpg',
+            w: 1024,
+            h: 1024
+        }
+    ];
+    }
+  
+    
+    // define options (if needed)
+    var options = {
+             // history & focus options are disabled on CodePen        
+        history: false,
+        focus: false,
+
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+        
+    };
+    
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+};
+
+// document.getElementById('btn').onclick = openPhotoSwipe;
+//floor page gallery init
+
 jQuery(document).ready(function($) {
+
+
 	$('#cn-button').removeClass('ui-btn ui-shadow');
 
 	    $('#home .ui-content , #aminities .ui-content').css('height',$(window).height());
         $('#myPanel .ui-panel-inner').css('height',$(window).height());
-         $("#owl-demo,#aminities-slider").owlCarousel({
+         $("#aminities-slider").owlCarousel({
  
       navigation : true, // Show next and prev buttons
       slideSpeed : 300,
@@ -229,5 +318,9 @@ jQuery(document).ready(function($) {
 
  });
  //for closing navigation menu
+
+$(document).on("pagebeforeshow","#pagetwo",function(){
+ $('#bgvid').play();
+});
 
 })

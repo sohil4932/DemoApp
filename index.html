@@ -49,37 +49,115 @@
 				<div class="cn-wrapper" id="cn-wrapper">
 				    <ul>
 				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
-				      <li ><a  href="#aminities"><span class="icon-headphones"></span></a></li>
-				      <li><a href="#"><span class="icon-home"></span></a></li>
-				      <li><a href="#video"><span class="icon-facetime-video"></span></a></li>
-				      <li><a href="#"><span class="icon-envelope-alt"></span></a></li>
+				      <li ><a  href="#aminities"><span>A</span></a></li>
+				      <li><a href="#floor"><i class="fa fa-building-o"></i></a></li>
+				      <li><a href="#home"><span class="icon-facetime-video"></span></a></li>
+				      <li><a href="#info"><span><i class="fa fa-info"></i></span></a></li>
 				     </ul>
 				</div>
 				<div id="cn-overlay" class="cn-overlay"></div>
 				<!-- End Nav Structure -->
 				
 		</div>
-
-		
-
-    <div id="owl-demo" class="owl-carousel owl-theme">
-     
-      <div class="item" style="background-image:url('img/1.jpg')"></div>
-      <div class="item" style="background-image:url('img/2.jpg')"></div>
-      <div class="item" style="background-image:url('img/3.jpg')"></div>
-     
-    </div>
-
-
-	    
+		<video autoplay loop id="bgvid">
+			<source src="EarthForApp.mp4" type="video/mp4">	
+		</video>
 		</div><!-- /content -->
 
 </div><!-- /page -->
 
 <!-- Start of floor plan's page -->
 <div data-role="page" id="floor">
+		 
 	<div role="main" class="ui-content">
-		
+
+			<div class="menu">
+	<label for="select-choice-1">Explore map</label>			
+	<select name="select-choice-1" id="select-choice-1" data-role="none" onChange="openPhotoSwipe(this.value)">
+		<option value="0">Whole Plan</option>
+ 		<option value="1">Tower A</option>
+		<option value="2">Tower B</option>
+		<option value="3">A to G Blocks</option>
+		<option value="4">J to N Blocks</option>
+		<option value="5">H-I Blocks</option>
+	</select>
+			</div>
+			<div class="component">
+				<!-- Start Nav Structure -->
+				<!-- <button class="cn-button" id="cn-button">+</button> -->
+				<img src="img/hlf-circle.png" class="cn-button" id="cn-button5">
+				<div class="cn-wrapper" id="cn-wrapper5">
+				   <ul>
+				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
+				      <li ><a  href="#aminities"><span>A</span></a></li>
+				      <li><a href="#floor"><i class="fa fa-building-o"></i></a></li>
+				      <li><a href="#home"><span class="icon-facetime-video"></span></a></li>
+				      <li><a href="#info"><span ><i class="fa fa-info"></i>
+</span></a></li>
+				     </ul>
+				</div>
+				<div id="cn-overlay5" class="cn-overlay"></div>
+				<!-- End Nav Structure -->
+				
+		</div>
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <div class="pswp__container">
+            <!-- don't modify these 3 pswp__item elements, data is added later on -->
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <div class="pswp__button pswp__button--close" title="Close (Esc)"></div>
+
+                <div class="pswp__button pswp__button--share" title="Share"></div>
+
+                <div class="pswp__button pswp__button--fs" title="Toggle fullscreen"></div>
+
+                <div class="pswp__button pswp__button--zoom" title="Zoom in/out"></div>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+</div>		
 	</div><!-- /content -->
 	
 </div><!-- /end of floor page -->
@@ -107,15 +185,16 @@
 				<!-- <button class="cn-button" id="cn-button">+</button> -->
 				<img src="img/hlf-circle.png" class="cn-button" id="cn-button2">
 				<div class="cn-wrapper" id="cn-wrapper2">
-				    <ul>
+				   <ul>
 				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
-				      <li ><a><span class="icon-headphones"></span></a></li>
-				      <li><a href="#"><span class="icon-home"></span></a></li>
-				      <li><a href="#video"><span class="icon-facetime-video"></span></a></li>
-				      <li><a href="#"><span class="icon-envelope-alt"></span></a></li>
+				      <li ><a  href="#aminities"><span>A</span></a></li>
+				      <li><a href="#floor"><i class="fa fa-building-o"></i></a></li>
+				      <li><a href="#home"><span class="icon-facetime-video"></span></a></li>
+				      <li><a href="#info"><span ><i class="fa fa-info"></i>
+</span></a></li>
 				     </ul>
 				</div>
-				<div id="cn-overlay" class="cn-overlay"></div>
+				<div id="cn-overlay2" class="cn-overlay"></div>
 				<!-- End Nav Structure -->
 				
 		</div>
@@ -135,41 +214,66 @@
 
 
 
-	<!-- video's page -->
 	
-	<div data-role="page" id="video">
-
-	<div data-role="header">
-		
-	</div><!-- /header -->
-
+	<!-- info's page -->
+	
+	<div data-role="page" id="info">
+	
 	<div role="main" class="ui-content">
-		<div class="btn">sd</div>
+		<div class="map">
+			<img src="img/map.png" alt="">
+		</div>
+		<div class="contact-wrapper">
+			<div class="contact-info">
+				<div class="site">
+<p><span>Site</span>:</p><p>Vasna-Bhayli Main Road,</p>
+					<p>Opp. Nilambar-1 &</p>
+					<p>Hanumanji Temple,</p>
+					<p>Vadodara-390 007</p>
+				</div>
+				<div class="office">
+					<p ><span>Developers</span>:</p><p style="margin-bottom:10px;">BEACON Realty</p>
+					<p><span>Office</span>:</p>
+					<p>303, EARTH, Nr. Malhar Point,</p>
+					<p>O.P. Road, Vadodara.</p>
+					<p >tel.: 0265 2350521</p>
+				</div>
+				<div class="booking">
+					
+					<div><p><span>Booking Call</span>:</p>
+					<p>76000 66201, 76000 66202, 76000 66203</p></div>
+
+					<div><p><span>website</span>:</p>
+					<p>www.earthvin.com</p></div>
+
+					<div><p><span>e-mail</span>:</p>
+					<p>earthartica@gmail.com</p>
+					<p>earth_vin@yahoo.com</p></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="component">
+				<!-- Start Nav Structure -->
+				<!-- <button class="cn-button" id="cn-button">+</button> -->
+				<img src="img/hlf-circle.png" class="cn-button" id="cn-button4">
+				<div class="cn-wrapper" id="cn-wrapper4">
+				   <ul>
+				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
+				      <li ><a  href="#aminities"><span>A</span></a></li>
+				      <li><a href="#floor"><i class="fa fa-building-o"></i></a></li>
+				      <li><a href="#home"><span class="icon-facetime-video"></span></a></li>
+				      <li><a href="#info"><span ><i class="fa fa-info"></i>
+</span></a></li>
+				     </ul>
+				</div>
+				<div id="cn-overlay4" class="cn-overlay"></div>
+				<!-- End Nav Structure -->
+				
+		</div>
 	</div><!-- /content -->
-
-	<div data-role="footer">
-	
-	</div><!-- /footer -->
 </div>
-	<!-- video's page -->
-
-	<!-- help's page -->
-	
-	<div data-role="page" id="help">
-
-	<div data-role="header">
-		
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		
-	</div><!-- /content -->
-
-	<div data-role="footer">
-	
-	</div><!-- /footer -->
-</div>
-	<!-- help's page -->
+	<!-- info's page -->
 
 	<!-- gallery page starts fom here -->
 		
@@ -197,15 +301,16 @@
 				<!-- <button class="cn-button" id="cn-button">+</button> -->
 				<img src="img/hlf-circle.png" class="cn-button " id="cn-button3">
 				<div class="cn-wrapper" id="cn-wrapper3">
-				    <ul>
+				   <ul>
 				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
-				      <li ><a href="#aminities"><span class="icon-headphones"></span></a></li>
-				      <li><a href="#"><span class="icon-home"></span></a></li>
-				      <li><a href="#video"><span class="icon-facetime-video"></span></a></li>
-				      <li><a href="#"><span class="icon-envelope-alt"></span></a></li>
+				      <li ><a  href="#aminities"><span>A</span></a></li>
+				      <li><a href="#floor"><i class="fa fa-building-o"></i></a></li>
+				      <li><a href="#home"><span class="icon-facetime-video"></span></a></li>
+				      <li><a href="#info"><span ><i class="fa fa-info"></i>
+</span></a></li>
 				     </ul>
 				</div>
-				<div id="cn-overlay2" class="cn-overlay"></div>
+				<div id="cn-overlay3" class="cn-overlay"></div>
 				<!-- End Nav Structure -->
 				
 		</div>
@@ -214,81 +319,71 @@
 				<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/1.jpg" itemprop="contentUrl" data-size="1024x1024">
+      <a href="img/1.jpg" itemprop="contentUrl" data-size="800x600">
           <img src="img/1.jpg" itemprop="thumbnail" alt="Image description" />
       </a>                                
     </figure>
 
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/2.jpg" itemprop="contentUrl" data-size="964x1024">
+      <a href="img/2.jpg" itemprop="contentUrl" data-size="800x600">
           <img src="img/2.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure>
 
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/3.jpg" itemprop="contentUrl" data-size="1024x683">
+      <a href="img/3.jpg" itemprop="contentUrl" data-size="1321x600">
           <img src="img/3.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure>
 
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/4.jpg" itemprop="contentUrl" data-size="1024x768">
+      <a href="img/4.jpg" itemprop="contentUrl" data-size="855x600">
           <img src="img/4.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure>
 	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/5.jpg" itemprop="contentUrl" data-size="1024x768">
+      <a href="img/5.jpg" itemprop="contentUrl" data-size="1330x600">
           <img src="img/5.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure>
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/4.jpg" itemprop="contentUrl" data-size="1024x768">
-          <img src="img/4.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-    </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/5.jpg" itemprop="contentUrl" data-size="1024x768">
-          <img src="img/5.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-    </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/6.jpg" itemprop="contentUrl" data-size="1024x768">
+      <a href="img/6.jpg" itemprop="contentUrl" data-size="838x600">
           <img src="img/6.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure>
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/7.jpg" itemprop="contentUrl" data-size="1024x768">
+      <a href="img/7.jpg" itemprop="contentUrl" data-size="1682x600">
           <img src="img/7.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure>
 	   <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/8.jpg" itemprop="contentUrl" data-size="1024x768">
+      <a href="img/8.jpg" itemprop="contentUrl" data-size="1371x600">
           <img src="img/8.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure> <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/9.jpg" itemprop="contentUrl" data-size="1024x768">
+      <a href="img/9.jpg" itemprop="contentUrl" data-size="1568x600">
           <img src="img/9.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure> <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/10.jpg" itemprop="contentUrl" data-size="1024x768">
+      <a href="img/10.jpg" itemprop="contentUrl" data-size="1125x600">
           <img src="img/10.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure> <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/11.jpg" itemprop="contentUrl" data-size="1024x768">
+      <a href="img/11.jpg" itemprop="contentUrl" data-size="1415x600">
           <img src="img/11.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure> <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/12.jpg" itemprop="contentUrl" data-size="1024x768">
+      <a href="img/12.jpg" itemprop="contentUrl" data-size="1252x600">
           <img src="img/12.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure>
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/13.jpg" itemprop="contentUrl" data-size="1024x768">
+      <a href="img/13.jpg" itemprop="contentUrl" data-size="1274x600">
           <img src="img/13.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure>
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="img/14.jpg" itemprop="contentUrl" data-size="1024x768">
+      <a href="img/14.jpg" itemprop="contentUrl" data-size="800x600">
           <img src="img/14.jpg" itemprop="thumbnail" alt="Image description" />
       </a>
     </figure>
@@ -363,6 +458,9 @@
 <script src="js/demo1.js"></script>
 <script src="js/demo2.js"></script>
 <script src="js/demo3.js"></script>	
+<script src="js/demo4.js"></script>	
+<script src="js/demo5.js"></script>	
+
 <script src="js/photo-swipe.min.js"></script> 
 <script src="js/photo-swipe-ui-default.min.js"></script>
 <script src="js/app.js"></script>
