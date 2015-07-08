@@ -57,7 +57,7 @@ background-size: cover;
 }
 #floor .map{overflow: hidden;}
 #floor .ui-content{padding: 0px;}
-#floor{background-image: url(../img/top-view.jpg);background-size: cover;}
+#floor .ui-panel-wrapper{background-image: url(../img/top-view.jpg);background-size: cover;}
 #floor .menu {
     float: right;
 }
@@ -128,7 +128,7 @@ background-size: cover;
 /*aminities page's css*/
 
 /*info page's css*/
-#info{background-color: #211f1f;}
+#info .ui-content{background-color: #211f1f;padding: 0px;}
 
 #info .site,#info .office, #info .booking {
     color: #d1d3d6;

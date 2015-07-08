@@ -68,10 +68,20 @@
 
 <!-- Start of floor plan's page -->
 <div data-role="page" id="floor">
-		 
+	<div data-role="panel" id="floor-panel"> 
+	   <div class="logo">
+	   	<img src="img/logo.png" alt="Earth Artica">
+	   </div>
+	     <div class="buttons">
+	   	<div><i class="fa fa-phone"></i>
+		</div>
+	   	<div><i class="fa fa-video-camera"></i></div>
+	   	<div><i class="fa fa-map-marker"></i></div>
+	   </div>
+	</div>
 	<div role="main" class="ui-content">
-
-			<div class="menu">
+			<a href="#floor-panel"><img src="img/logo.png" id="panel-btn"></a>
+	<div class="menu">
 	<label for="select-choice-1">Explore map</label>			
 	<select name="select-choice-1" id="select-choice-1" data-role="none" onChange="openPhotoSwipe(this.value)">
 		<option value="0">Whole Plan</option>
@@ -218,15 +228,30 @@
 	<!-- info's page -->
 	
 	<div data-role="page" id="info">
-	
-	<div role="main" class="ui-content">
+		<div data-role="panel" id="info-panel"> 
+	   	
+	   <div class="logo">
+	   	<img src="img/logo.png" alt="Earth Artica">
+	   </div>
+	   <div class="buttons">
+	   	<div><i class="fa fa-phone"></i>
+		</div>
+	   	<div><i class="fa fa-video-camera"></i></div>
+	   	<div><i class="fa fa-map-marker"></i></div>
+	   </div>
+		</div>
+		<div role="main" class="ui-content">
+							<a href="#info-panel"><img src="img/logo.png" id="panel-btn"></a>
+
+		<div style="padding-top:20px;">
 		<div class="map">
 			<img src="img/map.png" alt="">
 		</div>
 		<div class="contact-wrapper">
+
 			<div class="contact-info">
 				<div class="site">
-<p><span>Site</span>:</p><p>Vasna-Bhayli Main Road,</p>
+					<p><span>Site</span>:</p><p>Vasna-Bhayli Main Road,</p>
 					<p>Opp. Nilambar-1 &</p>
 					<p>Hanumanji Temple,</p>
 					<p>Vadodara-390 007</p>
@@ -252,7 +277,7 @@
 				</div>
 			</div>
 		</div>
-
+</div>
 		<div class="component">
 				<!-- Start Nav Structure -->
 				<!-- <button class="cn-button" id="cn-button">+</button> -->
