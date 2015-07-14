@@ -8,7 +8,7 @@ p{text-shadow:none;}
 	/*navigation's css*/
 #home .ui-content{padding: 0px;}
 #home .side-nav.ui-link {color: white;left: 0;position: absolute;text-decoration: none;z-index: 20;}
-#panel-btn{width: 70px;position: fixed;z-index: 100;background-color: #211f1f;top: 10px;padding-left:10px;padding-top: 3px;padding-bottom: 3px;padding-right: 3px;}
+#panel-btn{width: 70px;position: fixed;z-index: 100;background-color: #211f1f;top: 10px;padding-left:10px;padding-top: 3px;padding-bottom: 3px;padding-right: 3px;left: 0px;}
  #myPanel,#gallery-panel,#aminities-panel,#floor-panel,#info-panel{background-color: #211f1f;}
  #myPanel h2{color: #fff;}
  #myPanel .logo,#gallery-panel .logo,#aminities-panel .logo,#floor-panel .logo,#info-panel .logo{text-align: center;}
