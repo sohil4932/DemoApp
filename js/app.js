@@ -1,3 +1,10 @@
+    //close app event
+    document.addEventListener("backbutton", function(e){
+        navigator.app.exitApp();
+  }, false);
+    //close app event
+
+    //close app on back button
    $.mobile.defaultPageTransition = 'slidedown';    
  //gallery init code
 
