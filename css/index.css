@@ -1,18 +1,22 @@
 /*home page's css*/
+body{
+    background-color: #211f1f !important;
+}
 p{text-shadow:none;}
 	/*navigation's css*/
  .cn-button:focus{box-shadow: none !important;}
 	/*navigation's css*/
 #home .ui-content{padding: 0px;}
 #home .side-nav.ui-link {color: white;left: 0;position: absolute;text-decoration: none;z-index: 20;}
-#panel-btn{width: 70px;position: absolute;z-index: 100;background-color: #211f1f;top: 10px;padding-left:10px;padding-top: 3px;padding-bottom: 3px;padding-right: 3px;}
+#panel-btn{width: 70px;position: fixed;z-index: 100;background-color: #211f1f;top: 10px;padding-left:10px;padding-top: 3px;padding-bottom: 3px;padding-right: 3px;}
  #myPanel,#gallery-panel,#aminities-panel,#floor-panel,#info-panel{background-color: #211f1f;}
  #myPanel h2{color: #fff;}
  #myPanel .logo,#gallery-panel .logo,#aminities-panel .logo,#floor-panel .logo,#info-panel .logo{text-align: center;}
 #myPanel .logo > img, #gallery-panel .logo > img,#aminities-panel  .logo > img, #floor-panel .logo > img, #info-panel .logo > img{width: 100px;}
 #myPanel .buttons,#gallery-panel .buttons ,#aminities-panel .buttons , #floor-panel .buttons, #info-panel .buttons{color: #d2ae6d;margin-top: 50%;overflow: hidden;}
-
-#myPanel .buttons div,#gallery-panel .buttons div ,#aminities-panel .buttons div, #floor-panel .buttons div, #info-panel .buttons div{float: left;font-size: 30px;text-align: center;width: 33.33%;}
+.ui-panel .buttons a {color: inherit;text-decoration: none !important;}
+#myPanel .buttons div,#gallery-panel .buttons div ,#aminities-panel .buttons div, #floor-panel .buttons div, #info-panel .buttons div{float: left;font-size: 20px;text-align: center;width: 30%;border: 1px solid;border-radius:30px;margin-right: 10px; padding: 5px 0px;}
+.ui-panel .buttons > div:last-child{margin-right: 0px !important;}
 #home .owl-wrapper-outer, #aminities .owl-wrapper-outer {height: 100% !important;    }
 
 #home .owl-wrapper ,#aminities .owl-wrapper{ height: 100%;   }
@@ -20,8 +24,22 @@ p{text-shadow:none;}
 #home .owl-item,#aminities .owl-item {height: 100%;}
 #home #owl-demo,#aminities #aminities-slider{height: 100%;overflow: hidden;}
 #home #owl-demo .item,#aminities #aminities-slider .item {background-size: 100% 100%;height: 100%;}
-
-
+.cn-wrapper .text {
+    font-size: 12px !important;
+    position: absolute;
+    top: 25px;
+    opacity: 1 !important;
+    letter-spacing: 1px;
+}
+.cn-wrapper li:nth-child(2) .text {
+    left: 181px;
+}
+#bg {
+    background-image: url("../img/5.jpg");
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+}
 #home video#bgvid {
 
 position: fixed;
@@ -57,7 +75,8 @@ background-size: cover;
 }
 #floor .map{overflow: hidden;}
 #floor .ui-content{padding: 0px;}
-#floor .ui-panel-wrapper{background-image: url(../img/top-view.jpg);background-size: cover;}
+/*#floor .ui-panel-wrapper{background-image: url(../img/top-view.jpg);background-size: cover;}*/
+#floor #floor-img > img{display: block;max-width: 100%;}
 #floor .menu {
     float: right;
 }
@@ -76,8 +95,11 @@ background-size: cover;
 
 #floor .menu {
     color: white;
-    float: right;
-    margin-top: 20px;
+    position: absolute;
+    right: 10px;
+    z-index: 100;
+    top: 20px;
+    
 }
 
 #floor .menu > *{
@@ -118,12 +140,14 @@ background-size: cover;
 }
 
 #aminities-slider .text {
-    left: 20px;
-    position: absolute;
-    top: 40%;
-        background-color: rgba(0, 0, 0, 0.8);
+    background-color: #211f1f;
     color: white;
+    opacity: 0.8;
     padding: 10px;
+    position: absolute;
+    right: 20px;
+    text-align: right;
+    top: 30%;
 }
 /*aminities page's css*/
 
@@ -160,7 +184,7 @@ background-size: cover;
 }
 #gallery figure img {
     display: block;
-    height: 250px;
+    height: 180px;
     max-width: 100%;
     width: 100%;
 }
@@ -170,3 +194,70 @@ background-size: cover;
     padding: 5px;
 }
 /* gallery page's css*/
+
+/*popup's css*/
+#popup{
+     background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+}
+#popup .form{
+
+    background-color: #fff;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width: 300px;
+padding: 20px;
+}
+.form input {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.form form div {
+    margin-bottom: 20px;
+}
+.form .error{
+    color: red;
+}
+.form form button {
+    background-color: #603913;
+    border: 0 none;
+    color: #fff;
+    padding: 10px;
+    width: 100px;
+}
+#popup input:focus{
+    outline: none;
+}
+.inquiry {
+    border: 1px solid #d2ae6d;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+.inquiry a{text-decoration: none;color: #fff !important;}
+/*popup's css*/
+
+@media(max-width: 640px) {
+    .ui-panel-inner .buttons{
+        margin-top: 40% !important;
+    }
+}

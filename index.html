@@ -11,8 +11,8 @@
 	<link rel="stylesheet" href="css/owl.theme.css">
 	<link rel="stylesheet" href="css/swipebox.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/photoswipe.css"> 
-<link rel="stylesheet" href="css/default-skin.css"> 
+	<link rel="stylesheet" href="css/photoswipe.css"> 
+	<link rel="stylesheet" href="css/default-skin.css"> 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -26,16 +26,19 @@
 <body>
 	<!-- Start of first page -->
 <div data-role="page" id="home">
-	<div data-role="panel" id="myPanel"> 
+	<div data-role="panel" id="myPanel" data-position-fixed="true">
 	
 	   <div class="logo">
 	   	<img src="img/logo.png" alt="Earth Artica">
 	   </div>
 	     <div class="buttons">
-	   	<div><i class="fa fa-phone"></i>
+	   	<div><a href="tel:+91 7600413036"><i class="fa fa-phone"></i></a>
 		</div>
-	   	<div><i class="fa fa-video-camera"></i></div>
-	   	<div><i class="fa fa-map-marker"></i></div>
+	   	<div><a href="https://www.youtube.com/watch?v=TfBlJ00Df-I"><i class="fa fa-video-camera"></i></a></div>
+	   	<div><a href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003"><i class="fa fa-map-marker"></i></a></div>
+	   </div>
+	   <div class="inquiry">
+	   	<a href="">Inquire Now</a>
 	   </div>
 
 	</div> 
@@ -48,35 +51,42 @@
 				<img src="img/hlf-circle.png" class="cn-button" id="cn-button">
 				<div class="cn-wrapper" id="cn-wrapper">
 				    <ul>
-				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
-				      <li ><a  href="#aminities"><span>A</span></a></li>
-				      <li><a href="#floor"><i class="fa fa-building-o"></i></a></li>
-				      <li><a href="#home"><span class="icon-facetime-video"></span></a></li>
-				      <li><a href="#info"><span><i class="fa fa-info"></i></span></a></li>
+				      <li class="gallery"><a href="#gallery"><span class="text">Gallery</span><i class="fa fa-picture-o"></i>
+</a></li>
+				      <li ><a  href="#aminities"><span class="text">Aminities</span><span>A</span></a></li>
+				      <li><a href="#floor"><span class="text">plan</span><i class="fa fa-building-o"></i></a></li>
+				      <li><a href="#home"><span class="text">video</span><i class="fa fa-video-camera"></i>
+</a></li>
+				      <li><a href="#info"><span class="text">info</span><span><i class="fa fa-info"></i></span></a></li>
 				     </ul>
 				</div>
 				<div id="cn-overlay" class="cn-overlay"></div>
 				<!-- End Nav Structure -->
 				
 		</div>
-		<video autoplay loop id="bgvid">
-			<source src="EarthForApp.mp4" type="video/mp4">	
-		</video>
+		<!-- <div style="height: 100%;overflow: hidden;">
+		<iframe style="width: 100%; height: 100%" src="EarthForApp.mp4" frameborder="0">
+		</iframe>
+		</div> -->
+		<div id="bg"></div>
 		</div><!-- /content -->
 
 </div><!-- /page -->
 
 <!-- Start of floor plan's page -->
 <div data-role="page" id="floor">
-	<div data-role="panel" id="floor-panel"> 
+	<div data-role="panel" id="floor-panel" data-position-fixed="true">
 	   <div class="logo">
 	   	<img src="img/logo.png" alt="Earth Artica">
 	   </div>
 	     <div class="buttons">
-	   	<div><i class="fa fa-phone"></i>
+	   	<div><a href="tel:+91 7600413036"><i class="fa fa-phone"></i></a>
 		</div>
-	   	<div><i class="fa fa-video-camera"></i></div>
-	   	<div><i class="fa fa-map-marker"></i></div>
+	   	<div><a href="https://www.youtube.com/watch?v=TfBlJ00Df-I"><i class="fa fa-video-camera"></i></a></div>
+	   	<div><a href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003"><i class="fa fa-map-marker"></i></a></div>
+	   </div>
+	    <div class="inquiry">
+	   	<a href="">Inquire Now</a>
 	   </div>
 	</div>
 	<div role="main" class="ui-content">
@@ -92,18 +102,23 @@
 		<option value="5">H-I Blocks</option>
 	</select>
 			</div>
+
+			<div id="floor-img">
+				<img src="img/layouts/top-view.jpg" alt="">
+			</div>
 			<div class="component">
 				<!-- Start Nav Structure -->
 				<!-- <button class="cn-button" id="cn-button">+</button> -->
 				<img src="img/hlf-circle.png" class="cn-button" id="cn-button5">
 				<div class="cn-wrapper" id="cn-wrapper5">
 				   <ul>
-				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
-				      <li ><a  href="#aminities"><span>A</span></a></li>
-				      <li><a href="#floor"><i class="fa fa-building-o"></i></a></li>
-				      <li><a href="#home"><span class="icon-facetime-video"></span></a></li>
-				      <li><a href="#info"><span ><i class="fa fa-info"></i>
-</span></a></li>
+				      <li class="gallery"><a href="#gallery"><span class="text">Gallery</span><i class="fa fa-picture-o"></i>
+</a></li>
+				      <li ><a  href="#aminities"><span class="text">Aminities</span><span>A</span></a></li>
+				      <li><a href="#floor"><span class="text">plan</span><i class="fa fa-building-o"></i></a></li>
+				      <li><a href="#home"><span class="text">video</span><i class="fa fa-video-camera"></i>
+</a></li>
+				      <li><a href="#info"><span class="text">info</span><span><i class="fa fa-info"></i></span></a></li>
 				     </ul>
 				</div>
 				<div id="cn-overlay5" class="cn-overlay"></div>
@@ -176,15 +191,18 @@
 
 	<!-- aminities page -->
 <div data-role="page" id="aminities">
-<div data-role="panel" id="aminities-panel"> 
+<div data-role="panel" id="aminities-panel" data-position-fixed="true">
 	   <div class="logo">
 	   	<img src="img/logo.png" alt="Earth Artica">
 	   </div>
 	     <div class="buttons">
-	   	<div><i class="fa fa-phone"></i>
+	   	<div><a href="tel:+91 7600413036"><i class="fa fa-phone"></i></a>
 		</div>
-	   	<div><i class="fa fa-video-camera"></i></div>
-	   	<div><i class="fa fa-map-marker"></i></div>
+	   	<div><a href="https://www.youtube.com/watch?v=TfBlJ00Df-I"><i class="fa fa-video-camera"></i></a></div>
+	   	<div><a href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003"><i class="fa fa-map-marker"></i></a></div>
+	   </div>
+	    <div class="inquiry">
+	   	<a href="">Inquire Now</a>
 	   </div>
 	</div> 
 
@@ -195,13 +213,14 @@
 				<!-- <button class="cn-button" id="cn-button">+</button> -->
 				<img src="img/hlf-circle.png" class="cn-button" id="cn-button2">
 				<div class="cn-wrapper" id="cn-wrapper2">
-				   <ul>
-				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
-				      <li ><a  href="#aminities"><span>A</span></a></li>
-				      <li><a href="#floor"><i class="fa fa-building-o"></i></a></li>
-				      <li><a href="#home"><span class="icon-facetime-video"></span></a></li>
-				      <li><a href="#info"><span ><i class="fa fa-info"></i>
-</span></a></li>
+				 <ul>
+				      <li class="gallery"><a href="#gallery"><span class="text">Gallery</span><i class="fa fa-picture-o"></i>
+</a></li>
+				      <li ><a  href="#aminities"><span class="text">Aminities</span><span>A</span></a></li>
+				      <li><a href="#floor"><span class="text">plan</span><i class="fa fa-building-o"></i></a></li>
+				      <li><a href="#home"><span class="text">video</span><i class="fa fa-video-camera"></i>
+</a></li>
+				      <li><a href="#info"><span class="text">info</span><span><i class="fa fa-info"></i></span></a></li>
 				     </ul>
 				</div>
 				<div id="cn-overlay2" class="cn-overlay"></div>
@@ -210,9 +229,22 @@
 		</div>
 		 <div id="aminities-slider" class="owl-carousel owl-theme">
 		     
-		      <div class="item" style="background-image:url('img/10.jpg')"><div><div class="text"><h2>Lorem Ipsum is simply dummy text of the</h2><div>Lorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of the</div></div></div></div>
-		      <div class="item" style="background-image:url('img/2.jpg')"><div><div class="text"><h2>Lorem Ipsum is simply dummy text of the</h2><div>Lorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of the</div></div></div></div>
-		      <div class="item" style="background-image:url('img/14.jpg')"><div><div class="text"><h2>Lorem Ipsum is simply dummy text of the</h2><div>Lorem Ipsum is simply dummy text of theLorem Ipsum is simply dummy text of the</div></div></div></div>
+		      <div class="item" style="background-image:url('img/10.jpg')"><div><div class="text"><ul><li>Home Theater</li>
+		      <li>24 Hrs. Security</li>
+		      <li>Intercom</li>
+		      <li>Lush Green Garden</li></ul></div></div></div>
+		      <div class="item" style="background-image:url('img/2.jpg')"><div><div class="text"><ul>
+		      	<li>Children Play Area</li>
+		      	<li>Club House</li>
+		      	<li>Gymnasium</li>
+		      	<li>Game Room</li>
+		      </ul></div></div></div>
+		      <div class="item" style="background-image:url('img/14.jpg')"><div><div class="text">
+		      	<ul>
+		      	<li>Swimming Pool</li><li>Multi Purpose Hall</li>
+		      	<li>Yoga Room</li>
+		      </ul>
+		  </div></div></div>
      
     	</div>
 
@@ -228,16 +260,19 @@
 	<!-- info's page -->
 	
 	<div data-role="page" id="info">
-		<div data-role="panel" id="info-panel"> 
+		<div data-role="panel" id="info-panel" data-position-fixed="true">
 	   	
 	   <div class="logo">
 	   	<img src="img/logo.png" alt="Earth Artica">
 	   </div>
 	   <div class="buttons">
-	   	<div><i class="fa fa-phone"></i>
+	   	<div><a href="tel:+91 7600413036"><i class="fa fa-phone"></i></a>
 		</div>
-	   	<div><i class="fa fa-video-camera"></i></div>
-	   	<div><i class="fa fa-map-marker"></i></div>
+	   	<div><a href="https://www.youtube.com/watch?v=TfBlJ00Df-I"><i class="fa fa-video-camera"></i></a></div>
+	   	<div><a href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003"><i class="fa fa-map-marker"></i></a></div>
+	   </div>
+	    <div class="inquiry">
+	   	<a href="">Inquire Now</a>
 	   </div>
 		</div>
 		<div role="main" class="ui-content">
@@ -283,13 +318,14 @@
 				<!-- <button class="cn-button" id="cn-button">+</button> -->
 				<img src="img/hlf-circle.png" class="cn-button" id="cn-button4">
 				<div class="cn-wrapper" id="cn-wrapper4">
-				   <ul>
-				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
-				      <li ><a  href="#aminities"><span>A</span></a></li>
-				      <li><a href="#floor"><i class="fa fa-building-o"></i></a></li>
-				      <li><a href="#home"><span class="icon-facetime-video"></span></a></li>
-				      <li><a href="#info"><span ><i class="fa fa-info"></i>
-</span></a></li>
+				  <ul>
+				      <li class="gallery"><a href="#gallery"><span class="text">Gallery</span><i class="fa fa-picture-o"></i>
+</a></li>
+				      <li ><a  href="#aminities"><span class="text">Aminities</span><span>A</span></a></li>
+				      <li><a href="#floor"><span class="text">plan</span><i class="fa fa-building-o"></i></a></li>
+				      <li><a href="#home"><span class="text">video</span><i class="fa fa-video-camera"></i>
+</a></li>
+				      <li><a href="#info"><span class="text">info</span><span><i class="fa fa-info"></i></span></a></li>
 				     </ul>
 				</div>
 				<div id="cn-overlay4" class="cn-overlay"></div>
@@ -304,16 +340,19 @@
 		
 	<div data-role="page" id="gallery">
 
-<div data-role="panel" id="gallery-panel"> 
+<div data-role="panel" id="gallery-panel" data-position-fixed="true">
 	   	
 	   <div class="logo">
 	   	<img src="img/logo.png" alt="Earth Artica">
 	   </div>
 	   <div class="buttons">
-	   	<div><i class="fa fa-phone"></i>
+	   	<div><a href="tel:+91 7600413036"><i class="fa fa-phone"></i></a>
 		</div>
-	   	<div><i class="fa fa-video-camera"></i></div>
-	   	<div><i class="fa fa-map-marker"></i></div>
+	   	<div><a href="https://www.youtube.com/watch?v=TfBlJ00Df-I"><i class="fa fa-video-camera"></i></a></div>
+	   	<div><a href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003"><i class="fa fa-map-marker"></i></a></div>
+	   </div>
+	    <div class="inquiry">
+	   	<a href="">Inquire Now</a>
 	   </div>
 		</div>
 	<div role="main" class="ui-content">
@@ -327,12 +366,13 @@
 				<img src="img/hlf-circle.png" class="cn-button " id="cn-button3">
 				<div class="cn-wrapper" id="cn-wrapper3">
 				   <ul>
-				      <li class="gallery"><a href="#gallery"><span class="icon-picture"></span></a></li>
-				      <li ><a  href="#aminities"><span>A</span></a></li>
-				      <li><a href="#floor"><i class="fa fa-building-o"></i></a></li>
-				      <li><a href="#home"><span class="icon-facetime-video"></span></a></li>
-				      <li><a href="#info"><span ><i class="fa fa-info"></i>
-</span></a></li>
+				      <li class="gallery"><a href="#gallery"><span class="text">Gallery</span><i class="fa fa-picture-o"></i>
+</a></li>
+				      <li ><a  href="#aminities"><span class="text">Aminities</span><span>A</span></a></li>
+				      <li><a href="#floor"><span class="text">plan</span><i class="fa fa-building-o"></i></a></li>
+				      <li><a href="#home"><span class="text">video</span><i class="fa fa-video-camera"></i>
+</a></li>
+				      <li><a href="#info"><span class="text">info</span><span><i class="fa fa-info"></i></span></a></li>
 				     </ul>
 				</div>
 				<div id="cn-overlay3" class="cn-overlay"></div>
@@ -478,6 +518,25 @@
 </div>
 	<!-- gallery page starts fom here -->
 
+	<!-- pop up page starts from here -->
+	<div  class="ui-content" id="popup">
+		<div class="form">
+			   <form >
+  					
+  					<div class="name">
+  					<input type="text" name="fname" id="fname" placeholder="Enter your name here">
+  					<div class="error"></div>
+  					</div>
+  					<div class="number">
+  					<input type="text"  id="phoneNumber" placeholder="Enter your Contact number" min="10" max="10" pattern = "/^+91\d{9}$/">
+  					<div class="error"></div>
+  					</div>
+  					<button id="btn">Send</button>
+			   </form>
+		</div>
+  
+    </div>
+	<!-- pop up page starts from here -->
 
 
 <script src="js/demo1.js"></script>

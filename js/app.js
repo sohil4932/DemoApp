@@ -1,4 +1,4 @@
-
+   $.mobile.defaultPageTransition = 'slidedown';    
  //gallery init code
 
          var initPhotoSwipeFromDOM = function(gallerySelector) {
@@ -213,14 +213,13 @@ var openPhotoSwipe = function(id) {
 
     var pswpElement = document.querySelectorAll('#floor .pswp')[0];
 
-    // build items array
-    if(id == 0){
+      if(id == 0){
 
       var items = [
         {
-            src: 'img/top-view.jpg',
+            src: 'img/layouts/top-view.jpg',
             w: 1024,
-            h: 1024
+            h: 727
         }
     ];      
     }else if(id == 1){
@@ -228,12 +227,12 @@ var openPhotoSwipe = function(id) {
         {
             src: 'img/layouts/a-shop.jpg',
             w: 1024,
-            h: 1024
+            h: 542
         },
         {
              src: 'img/layouts/a-off.jpg',
             w: 1024,
-            h: 1024
+            h: 542
         }
     ];  
     }else if(id == 2){
@@ -241,12 +240,12 @@ var openPhotoSwipe = function(id) {
         {
             src: 'img/layouts/b-shop.jpg',
             w: 1024,
-            h: 1024
+            h: 542
         },
         {
              src: 'img/layouts/b-off.jpg',
             w: 1024,
-            h: 1024
+            h: 542
         }
     ];  
     }else if(id == 3){
@@ -255,7 +254,7 @@ var openPhotoSwipe = function(id) {
         {
              src: 'img/layouts/a-g-tower.jpg',
             w: 1024,
-            h: 1024
+            h: 1087
         }
     ];  
     }else if(id == 4){
@@ -263,7 +262,7 @@ var openPhotoSwipe = function(id) {
         {
              src: 'img/layouts/j-n-tower.jpg',
             w: 1024,
-            h: 1024
+            h: 1087
         }
     ];  
     }else{
@@ -271,7 +270,7 @@ var openPhotoSwipe = function(id) {
         {
              src: 'img/layouts/HI-tower.jpg',
             w: 1024,
-            h: 1024
+            h: 542
         }
     ];
     }
@@ -296,7 +295,13 @@ var openPhotoSwipe = function(id) {
 //floor page gallery init
 
 jQuery(document).ready(function($) {
+    
+        //localstorage code
+            if(localStorage.getItem('number') && localStorage.getItem('name')){
 
+                $('#popup').hide();
+            }
+    //localstorage code
 
 	$('#cn-button').removeClass('ui-btn ui-shadow');
 
@@ -315,12 +320,81 @@ jQuery(document).ready(function($) {
  $( window ).hashchange(function(){
     $('.cn-wrapper').removeClass('opened-nav');
         $('.cn-overlay').removeClass('on-overlay');
-
+         $('#myPopup').popup('open');
  });
  //for closing navigation menu
 
 $(document).on("pagebeforeshow","#pagetwo",function(){
  $('#bgvid').play();
+});
+
+//form validation
+$('.form form #btn').click(function(event) {
+     var phoneno = /^\d{10}$/;
+     name = $('.form #fname').val();
+     phoneNumber = $('.form #phoneNumber').val()
+    /* Act on the event */
+    event.preventDefault();
+    if(name == "" &&  phoneNumber== "" ){
+        $('.form .name .error').html('required');
+            $('.form .number .error').html('required');
+            return false
+    }
+    if(name == ""){
+        $('.form .name .error').html('required');
+        return false
+    }
+    if(phoneNumber== ""){
+            $('.form .number .error').html('required');
+        return false
+    }
+
+    if(!phoneno.test(phoneNumber)){
+                $('.form .number .error').html('not a valid number');
+                return false;
+    }
+     $('.form #fname').val('');
+      $('.form #phoneNumber').val('');
+    localStorage.setItem('name',name);
+    localStorage.setItem('number',phoneNumber);
+    $('#popup').hide();
+}); 
+
+$('.form form input').focus(function(event) {
+    $(this).parent('div').find('.error').html('');
+});
+//form validation
+
+$('.inquiry').click(function(event) {
+    /* Act on the event */
+    $.ajax({
+          type: "POST",
+          url: "http://mandrillapp.com/api/1.0/messages/send.json",
+          data: {
+            'key': 'B6bSMmQ85PvY1CIAOws09Q' ,
+            'message': {
+                'from_email': 'kishan_jobanputra@yahoo.in',
+              'to': [
+                  {
+                    'email': "kishanj918@gmail.com",
+                    'name': '',
+                    'type': 'to'
+                  }
+                ],
+              'autotext' : 'true',
+              'subject' : 'Earth mobile application',
+              'html' : 'name: '+localStorage.getItem('name')+'<br>Contact number: '+localStorage.getItem('number')
+              }
+            },
+            success:function(result){
+                if(result[0].status == "sent"){
+                    alert('we will get back to you soon');
+                }
+            },
+            error:function(error){
+                alert('Please check your internet connection');
+            }
+        });
 });
 
 })
